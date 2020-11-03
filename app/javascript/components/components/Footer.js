@@ -1,12 +1,29 @@
 import React from "react"
-import PropTypes from "prop-types"
+import { Nav, NavItem, NavLink } from 'reactstrap'
+
 class Footer extends React.Component {
     render() {
+        const {
+            logged_in,
+            sign_in_route,
+            sign_up_route,
+            sign_out_route,
+        } = this.props
         return (
-            <React.Fragment>
-                <h3>Footer</h3>
-            </React.Fragment>
-        );
+            <>
+                <div id="footer">
+                <Nav>
+                    <NavItem>
+                        <a href="/">Home</a>
+                    </NavItem>
+                    <NavItem>
+                        <a href="/search">New Search</a>
+                    </NavItem>
+                    
+                </Nav>
+                </div>
+            </>
+        )
     }
 }
 
