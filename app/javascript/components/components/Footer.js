@@ -12,14 +12,14 @@ class Footer extends React.Component {
         return (
             <>
                 <div id="footer">
-                  <Nav>
-                      <NavItem>
-                          <a href="/">Home</a>
-                      </NavItem>
-                      <NavItem>
-                          <a href="/search">New Search</a>
-                      </NavItem>
-                  </Nav>
+                    <Nav>
+                        <NavItem>
+                            <a href="/">Home</a>
+                        </NavItem>
+                        <NavItem>
+                            <a href="/searchnew">New Search</a>
+                        </NavItem>
+                    </Nav>
                 </div>
             </>
         )
