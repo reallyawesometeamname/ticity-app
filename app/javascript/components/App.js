@@ -38,20 +38,13 @@ class App extends React.Component {
     } = this.props
     return (
       <Router>
-        <h1>Welcome to TICity!</h1>
-        { logged_in &&
-          <div>
-            <a href={sign_out_route}>Sign Out</a>
-          </div>
-        }
 
-        { !logged_in &&
-          <div>
-            <a href={sign_in_route}>Sign In</a>
-          </div>
-        }
-
-        <Header />
+        <Header
+          logged_in={logged_in}
+          sign_in_route={sign_in_route}
+          sign_up_route={sign_up_route}
+          sign_out_route={sign_out_route}
+        />        
 
         <Switch>
           <Route exact path="/" component={Home} />
