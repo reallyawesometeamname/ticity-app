@@ -1,0 +1,2 @@
+class TicitySearchesController < ApplicationController
+end
