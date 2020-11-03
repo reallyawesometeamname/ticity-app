@@ -25,9 +25,6 @@ class Header extends React.Component {
                                 <NavItem>
                                     <a href={sign_out_route}>Sign Out</a>
                                 </NavItem>
-                                // <NavItem>
-                                //     <a href="apartmentnew">Post your apartment</a>
-                                // </NavItem>
                             </>
                         }
                         {!logged_in &&
