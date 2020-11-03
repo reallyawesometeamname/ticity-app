@@ -42,15 +42,15 @@ class SearchNew extends React.Component {
     }
 
     handleChange = (e) => {
-        let { form } = this.state
+        let {form} = this.state
         form[e.target.name] = e.target.value
-        this.setState({ form: form })
+        this.setState({form: form})
     }
 
     handleSubmit = (e) => {
         e.preventDefault()
         this.props.createNewSearch(this.state.form)
-        this.setState({ success: true })
+        this.setState({success: true})
     }
 
     render() {
@@ -258,7 +258,7 @@ class SearchNew extends React.Component {
                                             onClick={this.handleSubmit}
                                         >
                                             Find Your TICity!!!
-                                </Button>
+                                        </Button>
                                     </div>
                                 </Col>
                                 <Col>
@@ -369,7 +369,7 @@ class SearchNew extends React.Component {
                         </Form>
                     </div >
                 </div >
-                { this.state.success && <Redirect to="/mysearchindex" />}
+                {this.state.success && <Redirect to="/mysearchindex" />}
             </>
         );
     }

@@ -29,23 +29,6 @@ class App extends React.Component {
     }
   }
 
-  componentDidMount() {
-    this.getSearches()
-  }
-
-  getSearches = () => {
-    fetch("/ticity_searches")
-      .then(response => {
-        return response.json()
-      })
-      .then(payload => {
-        this.setState({ searches: payload })
-      })
-      .catch(errors => {
-        console.log("index errors:", errors);
-      })
-  }
-
   createNewSearch = (search) => {
     console.log(search);
   }
