@@ -18,7 +18,7 @@ class Header extends React.Component {
                             <a href="/">Home</a>
                         </NavItem>
                         <NavItem>
-                            <a href="/search">New Search</a>
+                            <a href="/searchnew">New Search</a>
                         </NavItem>
                         {logged_in &&
                             <>
