@@ -9,10 +9,13 @@ import {
     Col
 } from 'reactstrap'
 import { Redirect } from "react-router-dom";
+import cityData from "../TicityCities.js"
 
 class SearchNew extends React.Component {
     constructor(props) {
         super(props)
+        searchKey: ""
+        searchValue: 0
         this.state = {
             form: {
                 city1: "",
@@ -41,14 +44,61 @@ class SearchNew extends React.Component {
         }
     }
 
+    findCities = (cityData) => {
+      let {form} = this.state
+      // console.log(cityData[0]);
+      let topCity = ""
+      let secondCity = ""
+      let thirdCity = ""
+      let topValue = 0.0
+      let secondValue = 0.0
+      let thirdValue = 0.0
+      console.log(this.searchKey)
+      console.log(this.searchValue)
+      cityData.filter(value => {
+        for (var i in value) {
+          if (i == this.searchKey) {
+            if (value[i] > this.searchValue) {
+              if (value[i] > topValue) {
+                thirdValue = secondValue
+                secondValue = topValue
+                topValue = value[i]
+                thirdCity = secondCity
+                secondCity = topCity
+                topCity = value.name
+              } else if (value[i] > secondValue) {
+                thirdValue = secondValue
+                secondValue = value[i]
+                thirdCity = secondCity
+                secondCity = value.name
+              } else if (value[i] > thirdValue) {
+                thirdValue = value[i]
+                thirdCity = value.name
+              }
+            }
+          }
+        }
+      })
+      console.log(topCity)
+      console.log(secondCity)
+      console.log(thirdCity)
+      form["city1"] = topCity
+      form["city2"] = secondCity
+      form["city3"] = thirdCity
+      this.setState({form: form})
+    }
+
     handleChange = (e) => {
         let {form} = this.state
+        this.searchKey = e.target.name
+        this.searchValue = e.target.value
         form[e.target.name] = e.target.value
         this.setState({form: form})
     }
 
     handleSubmit = (e) => {
         e.preventDefault()
+        this.findCities(cityData)
         this.props.createNewSearch(this.state.form)
         this.setState({success: true})
     }
