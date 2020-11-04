@@ -9,10 +9,14 @@ import {
     Col
 } from 'reactstrap'
 import { Redirect } from "react-router-dom";
+import cityData from "../TicityCities.js"
+import findCities from "../../helpers/find-cities"
 
 class SearchNew extends React.Component {
     constructor(props) {
         super(props)
+        searchKey: ""
+        searchValue: 0
         this.state = {
             form: {
                 city1: "",
@@ -41,14 +45,24 @@ class SearchNew extends React.Component {
         }
     }
 
+    findCities = (cityData) => {
+      let {form} = this.state
+      // console.log(cityData[0]);
+      const newForm = findCities(cityData, form, this.searchKey, this.searchValue)
+      this.setState({form: newForm})
+    }
+
     handleChange = (e) => {
         let {form} = this.state
+        this.searchKey = e.target.name
+        this.searchValue = e.target.value
         form[e.target.name] = e.target.value
         this.setState({form: form})
     }
 
     handleSubmit = (e) => {
         e.preventDefault()
+        this.findCities(cityData)
         this.props.createNewSearch(this.state.form)
         this.setState({success: true})
     }
