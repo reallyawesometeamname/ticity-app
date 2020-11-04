@@ -19,3 +19,16 @@
     background-color: rgba(127, 255, 212, 0.6);
     padding: 10px;
 }
+
+.searches-card {
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 20px;
+    width: 30%;
+}
+
+.search-index-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

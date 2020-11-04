@@ -44,27 +44,31 @@ class SearchNew extends React.Component {
             success: false
         }
     }
+    findCities = (cityData) => {
+        let { form } = this.state
+        const newForm = findCities(cityData, form, this.searchKey, this.searchValue)
+        this.setState({ form: newForm })
+    }
 
     findCities = (cityData) => {
-      let {form} = this.state
-      // console.log(cityData[0]);
-      const newForm = findCities(cityData, form, this.searchKey, this.searchValue)
-      this.setState({form: newForm})
+        let { form } = this.state
+        const newForm = findCities(cityData, form, this.searchKey, this.searchValue)
+        this.setState({ form: newForm })
     }
 
     handleChange = (e) => {
-        let {form} = this.state
+        let { form } = this.state
         this.searchKey = e.target.name
         this.searchValue = e.target.value
         form[e.target.name] = e.target.value
-        this.setState({form: form})
+        this.setState({ form: form })
     }
 
     handleSubmit = (e) => {
         e.preventDefault()
         this.findCities(cityData)
         this.props.createNewSearch(this.state.form)
-        this.setState({success: true})
+        this.setState({ success: true })
     }
 
     render() {
@@ -383,7 +387,7 @@ class SearchNew extends React.Component {
                         </Form>
                     </div >
                 </div >
-                {this.state.success && <Redirect to="/mysearchindex" />}
+                {this.state.success && <Redirect to="/searchresults" />}
             </>
         );
     }
