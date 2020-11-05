@@ -13,6 +13,7 @@ import SearchEdit from "./pages/SearchEdit"
 import SearchResults from "./pages/SearchResults"
 
 import mockSearch from "./mockSearch.js"
+import cityData from './TicityCities.js'
 
 import {
   BrowserRouter as Router,
@@ -53,23 +54,58 @@ class App extends React.Component {
 
         <Switch>
           <Route exact path="/" component={Home} />
+
           <Route path="/searchedit/:id" component={SearchEdit} />
-          <Route path="/mysearchindex" component={MySearchIndex} />
-          <Route path="/searchresults" component={SearchResults} />
 
           {logged_in &&
             <Route
-              path="/searchnew"
-              render={(props) =>
-                <SearchNew
-                  createNewSearch={this.createNewSearch}
-                  current_user={current_user}
-                />
-              }
+              path="/mysearchindex"
+              render={(props) => {
+                let user = current_user.id
+                let searches =
+                  this.state.searches.filter(search => search.user_id === user)
+                return (
+                  <MySearchIndex searches={searches}
+                  />
+                )
+              }}
             />
           }
 
-          <Route path="/cityshow/:id" component={CityShow} />
+          <Route
+            path="/searchresults"
+            render={(props) =>
+              <SearchResults
+                searches=
+                {this.state.searches.filter(search => search.id === 1)}
+              />
+            }
+          />
+
+          <Route
+            path="/searchnew"
+            render={(props) =>
+              <SearchNew
+                createNewSearch={this.createNewSearch}
+                current_user={current_user}
+              />
+            }
+          />
+            }
+
+          <Route
+            path="/cityshow/:id"
+            render={(props) => {
+              let cityName = props.match.params.id
+              let city = cityData.find(result => result.id === cityName)
+              return (
+                <CityShow
+                  city={city}
+                />
+              )
+            }
+            }
+          />
           <Route path="/aboutus" component={AboutUs} />
           <Route component={NotFound} />
         </Switch>
