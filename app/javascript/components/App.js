@@ -34,6 +34,10 @@ class App extends React.Component {
     console.log(search);
   }
 
+  updateSearch = (search, id) => {
+   console.log("Search", search, "id", id)
+ }
+
   render() {
     const {
       logged_in,
@@ -55,7 +59,23 @@ class App extends React.Component {
         <Switch>
           <Route exact path="/" component={Home} />
 
-          <Route path="/searchedit/:id" component={SearchEdit} />
+          { logged_in &&
+            <Route
+              path="/searchedit/:id"
+              render={ (props) => {
+                const id = props.match.params.id                
+                const search = this.state.searches.find(search => search.id === parseInt(id))
+                return (
+                  <SearchEdit
+                    updateSearch={ this.updateSearch }
+                    current_user={ current_user }
+                    search={ search }
+                    logged_in={logged_in}
+                  />
+                )
+              }}
+            />
+          }
 
           {logged_in &&
             <Route
@@ -65,7 +85,8 @@ class App extends React.Component {
                 let searches =
                   this.state.searches.filter(search => search.user_id === user)
                 return (
-                  <MySearchIndex searches={searches}
+                  <MySearchIndex
+                    searches={searches}
                   />
                 )
               }}
@@ -78,6 +99,7 @@ class App extends React.Component {
               <SearchResults
                 searches=
                 {this.state.searches.filter(search => search.id === 1)}
+                logged_in={logged_in}
               />
             }
           />

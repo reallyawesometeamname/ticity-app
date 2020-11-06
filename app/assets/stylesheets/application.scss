@@ -27,8 +27,22 @@
     width: 30%;
 }
 
-.search-index-body {
+#search-index-body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin: 100px;
+}
+
+#city-show-body {
+  display: inline-table;
+  justify-content: space-around;
+  margin: 100px;
+}
+
+.body-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 100px;
 }
