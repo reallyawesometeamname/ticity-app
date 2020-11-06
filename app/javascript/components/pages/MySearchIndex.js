@@ -1,5 +1,5 @@
-import React from "react"
-import { Link } from "react-router-dom"
+import React from "react";
+import { Link } from "react-router-dom";
 
 class MySearchIndex extends React.Component {
   render() {
@@ -15,10 +15,10 @@ class MySearchIndex extends React.Component {
                 <h3>{search.city3}</h3>
                 <br />
                 <Link to={`/searchresults/${search.id}`} className="button">
-                    More Info
+                  More Info
                 </Link>
               </div>
-            )
+            );
           })}
         </div>
       </React.Fragment>
@@ -26,4 +26,4 @@ class MySearchIndex extends React.Component {
   }
 }
 
-export default MySearchIndex
+export default MySearchIndex;
