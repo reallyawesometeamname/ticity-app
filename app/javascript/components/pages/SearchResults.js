@@ -13,11 +13,7 @@ class SearchResults extends React.Component {
                 <div key={index} className="search-result-card">
                   <h3>{search.city1}</h3>
                   <br />
-                  <Link
-                    to={`/cityshow/${search.city1}`}
-                    city1={search.city1}
-                    className="button"
-                  >
+                  <Link to={`/cityshow/${search.id}`} className="button">
                     More Info
                   </Link>
                 </div>

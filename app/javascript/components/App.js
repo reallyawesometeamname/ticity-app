@@ -108,8 +108,8 @@ class App extends React.Component {
           <Route
             path="/cityshow/:id"
             render={(props) => {
-              let cityName = props.match.params.id;
-              let city = cityData.find((result) => result.id === cityName);
+              let currentCityId = props.match.params.id;
+              let city = cityData.find((result) => result.id === currentCityId);
               return <CityShow city={city} />;
             }}
           />

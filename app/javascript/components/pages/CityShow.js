@@ -15,9 +15,7 @@ class CityShow extends React.Component {
           <h3>Housing is a {city.housing.toFixed(2)} out of 10</h3>
           <h3>Cost of living is a {city.costofliving.toFixed(2)} out of 10</h3>
           <h3>Startups is a {city.startups.toFixed(2)} out of 10</h3>
-          <h3>
-            Venture Capital is a {city.venturecapital.toFixed(2)} out of 10
-          </h3>
+          <h3>Venture Capital is a {city.capital.toFixed(2)} out of 10</h3>
           <h3>
             Ease of traveling(national/international) is a{" "}
             {city.travel.toFixed(2)} out of 10
