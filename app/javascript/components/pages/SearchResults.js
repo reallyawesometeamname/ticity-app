@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 class SearchResults extends React.Component {
   render() {
     return (
-      <React.Fragment>
+      <>
         <h3>Your top TICities are...</h3>
         <div className="body-container">
           {this.props.searches.map((search, index) => {
@@ -42,7 +42,7 @@ class SearchResults extends React.Component {
             );
           })}
         </div>
-      </React.Fragment>
+      </>
     );
   }
 }

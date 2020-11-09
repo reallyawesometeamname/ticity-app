@@ -12,7 +12,6 @@ import SearchNew from "./pages/SearchNew";
 import SearchEdit from "./pages/SearchEdit";
 import SearchResults from "./pages/SearchResults";
 
-import mockSearch from "./mockSearch.js";
 import cityData from "./TicityCities.js";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -22,16 +21,83 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      searches: mockSearch,
+      searches: [],
     };
   }
 
+  componentDidMount() {
+    this.getSearches();
+  }
+
+  getSearches = () => {
+    fetch("/ticity_searches")
+      .then((response) => {
+        return response.json();
+      })
+      .then((payload) => {
+        this.setState({ searches: payload });
+      })
+      .catch((errors) => {
+        console.log("index errors:", errors);
+      });
+  };
+
   createNewSearch = (search) => {
     console.log(search);
+    return fetch("/ticity_searches", {
+      body: JSON.stringify(search),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+    })
+      .then((response) => {
+        this.getSearches();
+      })
+      .catch((errors) => {
+        console.log("create errors:", errors);
+      });
   };
 
   updateSearch = (search, id) => {
-    console.log(search);
+    console.log("Search", search, "id", id);
+    return fetch(`/ticity_searches/${id}`, {
+      // converting an object to a string
+      body: JSON.stringify(search),
+      // specify the info being sent in JSON and the info returning should be JSON
+      headers: {
+        "Content-Type": "application/json",
+      },
+      // HTTP verb so the correct endpoint is invoked on the server
+      method: "PATCH",
+    })
+      .then((response) => {
+        if (response.status === 200) {
+          this.getSearches();
+        }
+        return response;
+      })
+      .catch((errors) => {
+        console.log("edit errors", errors);
+      });
+  };
+
+  deleteSearch = (id) => {
+    console.log(id);
+    return fetch(`/ticity_searches/${id}`, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "DELETE",
+    })
+      .then((response) => {
+        alert("Remove this search?");
+        this.getSearches();
+        return response;
+      })
+      .catch((errors) => {
+        console.log("delete errors:", errors);
+      });
   };
 
   render() {
@@ -80,7 +146,12 @@ class App extends React.Component {
                 let searches = this.state.searches.filter(
                   (search) => search.user_id === user
                 );
-                return <MySearchIndex searches={searches} />;
+                return (
+                  <MySearchIndex
+                    searches={searches}
+                    deleteSearch={this.deleteSearch}
+                  />
+                );
               }}
             />
           )}
@@ -89,7 +160,7 @@ class App extends React.Component {
             render={(props) => (
               <SearchResults
                 searches={this.state.searches.filter(
-                  (search) => search.id === 1
+                  (search) => search.id === 6
                 )}
                 logged_in={logged_in}
               />

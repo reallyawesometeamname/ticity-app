@@ -46,3 +46,12 @@
   justify-content: space-around;
   margin: 100px;
 }
+
+.button {
+  border: 1px solid black;
+  padding: 15px;
+  background-color: #aec3b0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+}

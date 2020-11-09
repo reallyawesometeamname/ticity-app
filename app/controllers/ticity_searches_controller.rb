@@ -15,7 +15,7 @@ class TicitySearchesController < ApplicationController
   end
 
   def update
-    ticity_search = current_user.searches.find(params[:id])
+    ticity_search = current_user.ticity_searches.find(params[:id])
     ticity_search.update(ticity_search_params)
     if ticity_search.valid?
       render json: ticity_search
@@ -25,7 +25,7 @@ class TicitySearchesController < ApplicationController
   end
 
   def destroy
-    ticity_search = current_user.searches.find(params[:id])
+    ticity_search = current_user.ticity_searches.find(params[:id])
     ticity_search.destroy()
     render json: ticity_search
   end
