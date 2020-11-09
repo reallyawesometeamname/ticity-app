@@ -31,7 +31,7 @@ class App extends React.Component {
   };
 
   updateSearch = (search, id) => {
-    console.log("Search", search, "id", id);
+    console.log(search);
   };
 
   render() {
