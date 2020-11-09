@@ -1,34 +1,48 @@
-@import 'bootstrap';
+@import "bootstrap";
 
 #header {
-    display: flex;
-    justify-content: space-around;
-    position: fixed;
-    width: 100%;
-    background-color: rgba(127, 255, 212, 0.4);
-    padding: 10px;
-    z-index: 1;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  width: 100%;
+  background-color: rgba(127, 255, 212, 0.4);
+  padding: 10px;
+  z-index: 1;
 }
 
 #footer {
-    display: flex;
-    justify-content: space-around;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: rgba(127, 255, 212, 0.6);
-    padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(127, 255, 212, 0.6);
+  padding: 10px;
 }
 
 .searches-card {
-    border: 1px solid black;
-    padding: 20px;
-    border-radius: 20px;
-    width: 30%;
+  border: 1px solid black;
+  padding: 20px;
+  border-radius: 20px;
+  width: 30%;
 }
 
-.search-index-body {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+#search-index-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 100px;
+}
+
+#city-show-body {
+  display: inline-table;
+  justify-content: space-around;
+  margin: 100px;
+}
+
+.body-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 100px;
 }
