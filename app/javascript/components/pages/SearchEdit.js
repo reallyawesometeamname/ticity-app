@@ -362,7 +362,9 @@ class SearchEdit extends React.Component {
             </Form>
           </div>
         </div>
-        {this.state.success && <Redirect to="/searchresults" />}
+        {this.state.success && (
+          <Redirect to={`/searchresults/${this.state.form.id}`} />
+        )}
       </>
     );
   }

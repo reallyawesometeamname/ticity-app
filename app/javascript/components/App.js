@@ -156,12 +156,13 @@ class App extends React.Component {
             />
           )}
           <Route
-            path="/searchresults"
+            path="/searchresults/:id"
             render={(props) => (
               <SearchResults
-                searches={this.state.searches.filter(
-                  (search) => search.id === 6
-                )}
+                searches={this.state.searches.filter((search) => {
+                  const currentSearch = props.match.params.id;
+                  return search.id === parseInt(currentSearch);
+                })}
                 logged_in={logged_in}
               />
             )}
@@ -175,7 +176,6 @@ class App extends React.Component {
               />
             )}
           />
-          }
           <Route
             path="/cityshow/:id"
             render={(props) => {
