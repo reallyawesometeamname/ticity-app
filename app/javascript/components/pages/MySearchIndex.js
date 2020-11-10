@@ -17,6 +17,14 @@ class MySearchIndex extends React.Component {
                 <Link to={`/searchresults/${search.id}`} className="button">
                   More Info
                 </Link>
+                <Link
+                  onClick={() => {
+                    this.props.deleteSearch(search.id);
+                  }}
+                  className="button"
+                >
+                  Delete
+                </Link>
               </div>
             );
           })}

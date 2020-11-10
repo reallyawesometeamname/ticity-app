@@ -9,7 +9,7 @@ class CityShow extends React.Component {
       (x) => x.name === "San Diego"
     )[0];
     return (
-      <React.Fragment>
+      <>
         <h3>City Info</h3>
         <div id="city-show-body">
           <h3>Housing is a {city.housing.toFixed(2)} out of 10</h3>
@@ -45,7 +45,17 @@ class CityShow extends React.Component {
             The outdoor activites is a {city.outdoors.toFixed(2)} out of 10
           </h3>
         </div>
-      </React.Fragment>
+        {!this.props.logged_in && (
+          <Link to={"/searchindex"} className="button">
+            Back to Searches
+          </Link>
+        )}
+        {this.props.logged_in && (
+          <Link to={"/mysearchindex"} className="button">
+            Back to Searches
+          </Link>
+        )}
+      </>
     );
   }
 }
