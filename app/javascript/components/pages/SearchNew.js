@@ -59,7 +59,10 @@ class SearchNew extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     this.findCities(cityData);
-    this.props.createNewSearch(this.state.form);
+    console.log("form", this.state.form);
+    this.props.createNewSearch(this.state.form).then((search) => {
+      this.props.history.push(`/searchresults/${search.id}`);
+    });
     this.setState({ success: true });
   };
 
@@ -379,9 +382,9 @@ class SearchNew extends React.Component {
             </Form>
           </div>
         </div>
-        {this.state.success && (
+        {/* {this.state.success && (
           <Redirect to={`/searchresults/${this.state.form.id}`} />
-        )}
+        )} */}
       </>
     );
   }
