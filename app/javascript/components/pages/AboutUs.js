@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Col, Form, FormGroup, Input, Label, Row } from "reactstrap";
-import Brian from "../assets/Brian.png";
+import brian from "../assets/brian.png";
 import chuck from "../assets/chuck.png";
 import matt from "../assets/matt.png";
 
@@ -12,13 +12,13 @@ class AboutUs extends React.Component {
         <div className="container">
           <Row>
             <Col>
-              <div className="about-us-card">
+              <div className="about-us-card" id="card1">
                 <div className="img-buttons-container">
                   <Row>
                     <Col>
                       <img
                         className="about-pics"
-                        src={Brian}
+                        src={brian}
                         alt="Picture of Brian's adorable face"
                       ></img>
                     </Col>
@@ -65,7 +65,7 @@ class AboutUs extends React.Component {
               </div>
             </Col>
             <Col>
-              <div className="about-us-card2">
+              <div className="about-us-card" id="card2">
                 <div className="img-buttons-container">
                   <Row>
                     <Col>
@@ -125,7 +125,7 @@ class AboutUs extends React.Component {
           </Row>
           <Row>
             <Col>
-              <div className="about-us-card3">
+              <div className="about-us-card" id="card3">
                 <div className="img-buttons-container">
                   <Row>
                     <Col>
