@@ -1,4 +1,5 @@
 TICITY APP
+url: https://floating-journey-84857.herokuapp.com/
 
 TEAM ROLES
 Bryan: Trello/Communications, Supporting Chuck
