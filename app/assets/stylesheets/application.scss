@@ -19,12 +19,66 @@
   background-color: rgba(127, 255, 212, 0.6);
   padding: 10px;
 }
-
 .searches-card {
   border: 1px solid black;
   padding: 20px;
   border-radius: 20px;
   width: 30%;
+}
+.about-us-card {
+  border: 1px solid black;
+  padding: 20px;
+  padding-bottom: 140px;
+  min-height: 387px;
+  border-radius: 20px;
+  width: 100%;
+  transform: rotate(20deg);
+  background-color: bisque;
+  margin-right: 50px;
+}
+.about-us-card2 {
+  border: 1px solid black;
+  padding: 20px;
+  border-radius: 20px;
+  width: 100%;
+  transform: rotate(-20deg);
+  margin-left: 50px;
+  background-color: bisque;
+}
+.about-us-card3 {
+  border: 1px solid black;
+  padding: 20px;
+  margin-top: 25px !important;
+  border-radius: 20px;
+  min-width: 540px;
+  max-width: 540px;
+  margin: 0 auto;
+  background-color: bisque;
+}
+.about-pics {
+  max-height: 300px;
+  max-width: auto;
+  margin: auto;
+}
+.img-buttons-container {
+  max-height: 300px;
+}
+button.link-stacks.btn.btn-secondary {
+  margin-left: 20px;
+  margin: 30px;
+}
+.body-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 100px;
+}
+.container {
+  padding-bottom: 60px !important;
+}
+#about-title {
+  text-align: center;
+  padding-top: 125px;
 }
 
 #search-index-body {
@@ -36,13 +90,6 @@
 
 #city-show-body {
   display: inline-table;
-  justify-content: space-around;
-  margin: 100px;
-}
-
-.body-container {
-  display: flex;
-  flex-direction: row;
   justify-content: space-around;
   margin: 100px;
 }
