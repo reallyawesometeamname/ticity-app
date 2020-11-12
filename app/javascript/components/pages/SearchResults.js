@@ -8,7 +8,6 @@ class SearchResults extends React.Component {
 
   render() {
     const { search } = this.props;
-    console.log("search:", search);
     return (
       search && (
         <>
