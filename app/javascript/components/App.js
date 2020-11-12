@@ -22,6 +22,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       searches: [],
+      search: null,
     };
   }
 
@@ -42,6 +43,19 @@ class App extends React.Component {
       });
   };
 
+  getSearch = (id) => {
+    fetch(`/ticity_searches/${id}`)
+      .then((response) => {
+        return response.json();
+      })
+      .then((payload) => {
+        this.setState({ search: payload });
+      })
+      .catch((errors) => {
+        console.log("index errors:", errors);
+      });
+  };
+
   createNewSearch = (search) => {
     console.log(search);
     return fetch("/ticity_searches", {
@@ -53,6 +67,11 @@ class App extends React.Component {
     })
       .then((response) => {
         this.getSearches();
+        return response.json();
+      })
+      .then((data) => {
+        console.log("data", data);
+        return data;
       })
       .catch((errors) => {
         console.log("create errors:", errors);
@@ -159,11 +178,9 @@ class App extends React.Component {
             path="/searchresults/:id"
             render={(props) => (
               <SearchResults
-                searches={this.state.searches.filter((search) => {
-                  const currentSearch = props.match.params.id;
-                  return search.id === parseInt(currentSearch);
-                })}
+                search={this.state.search}
                 logged_in={logged_in}
+                getSearch={() => this.getSearch(props.match.params.id)}
               />
             )}
           />
@@ -173,6 +190,7 @@ class App extends React.Component {
               <SearchNew
                 createNewSearch={this.createNewSearch}
                 current_user={current_user}
+                history={props.history}
               />
             )}
           />
