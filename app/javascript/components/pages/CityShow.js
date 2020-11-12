@@ -138,7 +138,10 @@ class CityShow extends React.Component {
               The Overall City Score ={" "}
               {this.state.form.overallCityScore.toFixed(2)}
             </h4>
-            {this.state.form.summary}
+            <div
+              dangerouslySetInnerHTML={{ __html: this.state.form.summary }}
+            ></div>
+             
             {!this.props.logged_in && (
               <Link
                 to={`/searchresults/${this.props.search.id}`}
