@@ -59,7 +59,6 @@ class SearchNew extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     this.findCities(cityData);
-    console.log("form", this.state.form);
     this.props.createNewSearch(this.state.form).then((search) => {
       this.props.history.push(`/searchresults/${search.id}`);
     });

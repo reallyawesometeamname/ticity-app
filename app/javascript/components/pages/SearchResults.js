@@ -8,7 +8,6 @@ class SearchResults extends React.Component {
 
   render() {
     const { search } = this.props;
-    console.log("search:", search);
     return (
       search && (
         <>
@@ -18,21 +17,30 @@ class SearchResults extends React.Component {
               <div key="city1" className="search-result-card">
                 <h3>{search.city1}</h3>
                 <br />
-                <Link to={`/cityshow/${search.id}`} className="button">
+                <Link
+                  to={`/cityshow/${search.id}/${search.city1}`}
+                  className="button"
+                >
                   More Info
                 </Link>
               </div>
               <div key="city2" className="search-result-card">
                 <h3>{search.city2}</h3>
                 <br />
-                <Link to={`/cityshow/${search.id}`} className="button">
+                <Link
+                  to={`/cityshow/${search.id}/${search.city2}`}
+                  className="button"
+                >
                   More Info
                 </Link>
               </div>
               <div key="city3" className="search-result-card">
                 <h3>{search.city3}</h3>
                 <br />
-                <Link to={`/cityshow/${search.id}`} className="button">
+                <Link
+                  to={`/cityshow/${search.id}/${search.city3}`}
+                  className="button"
+                >
                   More Info
                 </Link>
               </div>

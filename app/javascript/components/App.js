@@ -57,7 +57,6 @@ class App extends React.Component {
   };
 
   createNewSearch = (search) => {
-    console.log(search);
     return fetch("/ticity_searches", {
       body: JSON.stringify(search),
       headers: {
@@ -70,7 +69,6 @@ class App extends React.Component {
         return response.json();
       })
       .then((data) => {
-        console.log("data", data);
         return data;
       })
       .catch((errors) => {
@@ -79,7 +77,6 @@ class App extends React.Component {
   };
 
   updateSearch = (search, id) => {
-    console.log("Search", search, "id", id);
     return fetch(`/ticity_searches/${id}`, {
       // converting an object to a string
       body: JSON.stringify(search),
@@ -102,7 +99,6 @@ class App extends React.Component {
   };
 
   deleteSearch = (id) => {
-    console.log(id);
     return fetch(`/ticity_searches/${id}`, {
       headers: {
         "Content-Type": "application/json",
@@ -195,11 +191,15 @@ class App extends React.Component {
             )}
           />
           <Route
-            path="/cityshow/:id"
+            path="/cityshow/:id/:currentCity"
             render={(props) => {
               let currentCityId = props.match.params.id;
-              let city = cityData.find((result) => result.id === currentCityId);
-              return <CityShow city={city} />;
+              return (
+                <CityShow
+                  search={this.state.search}
+                  currentCity={props.match.params.currentCity}
+                />
+              );
             }}
           />
           <Route path="/aboutus" component={AboutUs} />
