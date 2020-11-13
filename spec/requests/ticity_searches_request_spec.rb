@@ -104,7 +104,6 @@ RSpec.describe "TicitySearches", type: :request do
             testSearch
             get "/ticity_searches/#{testSearch.id}", params: {ticity_search: testSearch}
             json = JSON.parse(response.body)
-            binding.irb
             expect(response).to have_http_status(:ok)
             expect(json["id"]).to eq(testSearch.id)
         end
