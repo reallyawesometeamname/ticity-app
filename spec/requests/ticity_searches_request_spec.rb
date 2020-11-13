@@ -98,6 +98,18 @@ RSpec.describe "TicitySearches", type: :request do
         end
     end
 
+    describe "show" do
+        it "displays a search" do
+            sign_in(user)
+            testSearch
+            get "/ticity_searches/#{testSearch.id}", params: {ticity_search: testSearch}
+            json = JSON.parse(response.body)
+            binding.irb
+            expect(response).to have_http_status(:ok)
+            expect(json["id"]).to eq(testSearch.id)
+        end
+    end
+
     describe "update" do 
         it "updates a search" do
             sign_in(user)

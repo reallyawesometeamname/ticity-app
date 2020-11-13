@@ -14,6 +14,11 @@ class TicitySearchesController < ApplicationController
     end
   end
 
+  def show
+    ticity_search = current_user.ticity_searches.find(params[:id])
+    render json: ticity_search
+  end
+
   def update
     ticity_search = current_user.ticity_searches.find(params[:id])
     ticity_search.update(ticity_search_params)
