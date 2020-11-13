@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Col, Form, FormGroup, Input, Label, Row } from "reactstrap";
-import brian from "../assets/brian.png";
+import brian from "../assets/Brian.png";
 import chuck from "../assets/chuck.png";
 import matt from "../assets/matt.png";
 
