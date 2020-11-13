@@ -180,16 +180,18 @@ class App extends React.Component {
               />
             )}
           />
-          <Route
-            path="/searchnew"
-            render={(props) => (
-              <SearchNew
-                createNewSearch={this.createNewSearch}
-                current_user={current_user}
-                history={props.history}
-              />
-            )}
-          />
+          {logged_in && (
+            <Route
+              path="/searchnew"
+              render={(props) => (
+                <SearchNew
+                  createNewSearch={this.createNewSearch}
+                  current_user={current_user}
+                  history={props.history}
+                />
+              )}
+            />
+          )}
           <Route
             path="/cityshow/:id/:currentCity"
             render={(props) => {
