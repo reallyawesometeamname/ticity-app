@@ -10,9 +10,9 @@ class CityShow extends React.Component {
     const { search } = this.props;
     let currentCity = this.props.currentCity;
 
-    const focusCity = Object.values(cityData).filter(
+    const focusCity = Object.values(cityData).find(
       (x) => x.name === currentCity
-    )[0];
+    );
     let cityHREF = focusCity.href;
 
     this.getTPCityData(cityHREF);
