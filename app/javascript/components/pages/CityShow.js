@@ -52,7 +52,7 @@ class CityShow extends React.Component {
     return (
       this.state.success && (
         <>
-          <h4>City Info</h4>
+          <h3>City Info</h3>
           <div id="city-show-body">
             <h4>
               Housing is a{" "}
