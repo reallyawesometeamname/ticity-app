@@ -19,6 +19,7 @@ let cityData = [
     leisure: 4.890000000000001,
     tolerance: 7.028499999999999,
     outdoors: 3.5155,
+    cityscore: 51.512162162162156,
   },
   {
     name: "Anchorage",
@@ -40,6 +41,7 @@ let cityData = [
     leisure: 3.2660000000000005,
     tolerance: 7.093,
     outdoors: 5.3580000000000005,
+    cityscore: 52.02472972972975,
   },
   {
     name: "Asheville",
@@ -61,6 +63,7 @@ let cityData = [
     leisure: 5.063,
     tolerance: 7.7305,
     outdoors: 2.2655,
+    cityscore: 50.92864864864867,
   },
   {
     name: "Atlanta",
@@ -82,6 +85,7 @@ let cityData = [
     leisure: 7.765499999999999,
     tolerance: 4.062,
     outdoors: 5.0095,
+    cityscore: 58.03756756756757,
   },
   {
     name: "Austin",
@@ -103,6 +107,7 @@ let cityData = [
     leisure: 6.6979999999999995,
     tolerance: 6.7895,
     outdoors: 3.9090000000000003,
+    cityscore: 60.5177027027027,
   },
   {
     name: "Baltimore",
@@ -124,10 +129,11 @@ let cityData = [
     leisure: 0.0,
     tolerance: 5.755,
     outdoors: 3.9795,
+    cityscore: 45.36324324324325,
   },
   {
     name: "Birmingham, AL",
-    href: "https://api.teleport.org/api/urban_areas/slug:birmingham-al/scores/",
+    href: "https://api.teleport.org/api/urban_areas/slug:birmingham/scores/",
     housing: 5.9035,
     costofliving: 5.814,
     startups: 4.3575,
@@ -145,6 +151,7 @@ let cityData = [
     leisure: 4.4350000000000005,
     tolerance: 6.421,
     outdoors: 1.2675,
+    cityscore: 58.58513513513513,
   },
   {
     name: "Boise",
@@ -166,6 +173,7 @@ let cityData = [
     leisure: 4.1995,
     tolerance: 6.9275,
     outdoors: 5.221,
+    cityscore: 55.63108108108109,
   },
   {
     name: "Boston",
@@ -187,6 +195,7 @@ let cityData = [
     leisure: 8.564,
     tolerance: 8.4815,
     outdoors: 5.659999999999999,
+    cityscore: 67.32635135135136,
   },
   {
     name: "Boulder",
@@ -208,6 +217,7 @@ let cityData = [
     leisure: 2.5649999999999995,
     tolerance: 9.274500000000002,
     outdoors: 6.699,
+    cityscore: 64.25229729729732,
   },
   {
     name: "Bozeman",
@@ -229,6 +239,7 @@ let cityData = [
     leisure: 1.9069999999999998,
     tolerance: 7.2935,
     outdoors: 6.134,
+    cityscore: 48.48432432432433,
   },
   {
     name: "Buffalo",
@@ -250,6 +261,7 @@ let cityData = [
     leisure: 4.32,
     tolerance: 7.404000000000001,
     outdoors: 4.6465,
+    cityscore: 56.03797297297297,
   },
   {
     name: "Charleston",
@@ -271,6 +283,7 @@ let cityData = [
     leisure: 6.595000000000001,
     tolerance: 5.771000000000001,
     outdoors: 5.0095,
+    cityscore: 54.797027027027035,
   },
   {
     name: "Charlotte",
@@ -292,6 +305,7 @@ let cityData = [
     leisure: 5.606,
     tolerance: 6.7895,
     outdoors: 1.3114999999999999,
+    cityscore: 56.057162162162165,
   },
   {
     name: "Chattanooga",
@@ -313,6 +327,7 @@ let cityData = [
     leisure: 4.1625,
     tolerance: 4.7925,
     outdoors: 3.908,
+    cityscore: 49.4091891891892,
   },
   {
     name: "Chicago",
@@ -334,6 +349,7 @@ let cityData = [
     leisure: 8.193,
     tolerance: 6.1339999999999995,
     outdoors: 5.4155,
+    cityscore: 62.90500000000001,
   },
   {
     name: "Cincinnati",
@@ -355,6 +371,7 @@ let cityData = [
     leisure: 6.118000000000001,
     tolerance: 5.2989999999999995,
     outdoors: 3.6075,
+    cityscore: 56.55027027027029,
   },
   {
     name: "Cleveland",
@@ -376,6 +393,7 @@ let cityData = [
     leisure: 5.696500000000001,
     tolerance: 4.775499999999999,
     outdoors: 4.669,
+    cityscore: 54.84851351351354,
   },
   {
     name: "Colorado Springs",
@@ -398,6 +416,7 @@ let cityData = [
     leisure: 3.8120000000000003,
     tolerance: 9.206,
     outdoors: 7.356499999999999,
+    cityscore: 55.11527027027028,
   },
   {
     name: "Columbus",
@@ -419,6 +438,7 @@ let cityData = [
     leisure: 6.465999999999999,
     tolerance: 5.9215,
     outdoors: 4.544999999999999,
+    cityscore: 58.759324324324325,
   },
   {
     name: "Dallas",
@@ -440,6 +460,7 @@ let cityData = [
     leisure: 7.1685,
     tolerance: 5.294,
     outdoors: 4.501999999999999,
+    cityscore: 59.02243243243244,
   },
   {
     name: "Denver",
@@ -461,6 +482,7 @@ let cityData = [
     leisure: 6.2235,
     tolerance: 7.860499999999999,
     outdoors: 7.932999999999999,
+    cityscore: 61.413243243243265,
   },
   {
     name: "Des Moines",
@@ -482,6 +504,7 @@ let cityData = [
     leisure: 6.0665000000000004,
     tolerance: 8.4765,
     outdoors: 3.299500000000001,
+    cityscore: 55.92121621621623,
   },
   {
     name: "Detroit",
@@ -503,6 +526,7 @@ let cityData = [
     leisure: 7.478,
     tolerance: 3.678,
     outdoors: 5.387499999999999,
+    cityscore: 52.3633783783784,
   },
   {
     name: "Eugene",
@@ -524,6 +548,7 @@ let cityData = [
     leisure: 2.9560000000000004,
     tolerance: 8.9695,
     outdoors: 3.533,
+    cityscore: 56.758648648648645,
   },
   {
     name: "Fort Collins",
@@ -545,6 +570,7 @@ let cityData = [
     leisure: 2.746,
     tolerance: 9.48,
     outdoors: 6.1865000000000006,
+    cityscore: 53.06662162162162,
   },
   {
     name: "Honolulu",
@@ -566,6 +592,7 @@ let cityData = [
     leisure: 7.622999999999999,
     tolerance: 7.774000000000001,
     outdoors: 5.917500000000001,
+    cityscore: 55.74702702702703,
   },
   {
     name: "Houston",
@@ -587,6 +614,7 @@ let cityData = [
     leisure: 7.144,
     tolerance: 5.34,
     outdoors: 5.385999999999999,
+    cityscore: 57.065540540540546,
   },
   {
     name: "Indianapolis",
@@ -608,6 +636,7 @@ let cityData = [
     leisure: 7.2989999999999995,
     tolerance: 6.869999999999999,
     outdoors: 3.9650000000000003,
+    cityscore: 55.76175675675677,
   },
   {
     name: "Jacksonville",
@@ -629,6 +658,7 @@ let cityData = [
     leisure: 5.6545000000000005,
     tolerance: 5.6785000000000005,
     outdoors: 5.013,
+    cityscore: 50.804864864864875,
   },
   {
     name: "Kansas City",
@@ -650,6 +680,7 @@ let cityData = [
     leisure: 6.674500000000001,
     tolerance: 5.0205,
     outdoors: 4.161500000000001,
+    cityscore: 52.51337837837839,
   },
   {
     name: "Knoxville",
@@ -671,6 +702,7 @@ let cityData = [
     leisure: 4.495500000000001,
     tolerance: 5.4025,
     outdoors: 1.7525,
+    cityscore: 48.39648648648649,
   },
   {
     name: "Las Vegas",
@@ -692,6 +724,7 @@ let cityData = [
     leisure: 6.3685,
     tolerance: 7.275,
     outdoors: 5.385,
+    cityscore: 55.9195945945946,
   },
   {
     name: "Los Angeles",
@@ -713,6 +746,7 @@ let cityData = [
     leisure: 9.196,
     tolerance: 6.959999999999999,
     outdoors: 6.747,
+    cityscore: 63.426351351351364,
   },
   {
     name: "Louisville",
@@ -734,6 +768,7 @@ let cityData = [
     leisure: 5.6935,
     tolerance: 5.778499999999999,
     outdoors: 1.3,
+    cityscore: 48.99202702702704,
   },
   {
     name: "Madison",
@@ -755,6 +790,7 @@ let cityData = [
     leisure: 4.422000000000001,
     tolerance: 7.9005,
     outdoors: 4.3759999999999994,
+    cityscore: 60.894999999999996,
   },
   {
     name: "Memphis",
@@ -776,6 +812,7 @@ let cityData = [
     leisure: 6.860499999999999,
     tolerance: 4.040500000000001,
     outdoors: 3.5694999999999997,
+    cityscore: 46.9977027027027,
   },
   {
     name: "Miami",
@@ -797,6 +834,7 @@ let cityData = [
     leisure: 6.7675,
     tolerance: 6.043500000000001,
     outdoors: 5.3845,
+    cityscore: 57.09540540540541,
   },
   {
     name: "Milwaukee",
@@ -818,6 +856,7 @@ let cityData = [
     leisure: 6.8375,
     tolerance: 4.844,
     outdoors: 5.064000000000001,
+    cityscore: 55.335675675675674,
   },
   {
     name: "Minneapolis-Saint Paul",
@@ -840,6 +879,7 @@ let cityData = [
     leisure: 6.8505,
     tolerance: 7.288,
     outdoors: 5.095999999999999,
+    cityscore: 61.163648648648646,
   },
   {
     name: "Nashville",
@@ -861,6 +901,7 @@ let cityData = [
     leisure: 7.0200000000000005,
     tolerance: 6.807500000000001,
     outdoors: 1.2734999999999999,
+    cityscore: 55.83432432432433,
   },
   {
     name: "New Orleans",
@@ -882,6 +923,7 @@ let cityData = [
     leisure: 7.1985,
     tolerance: 5.1240000000000006,
     outdoors: 1.0,
+    cityscore: 49.229189189189185,
   },
   {
     name: "New York",
@@ -903,6 +945,7 @@ let cityData = [
     leisure: 10.0,
     tolerance: 6.7125,
     outdoors: 5.7475,
+    cityscore: 67.27513513513514,
   },
   {
     name: "Oklahoma City",
@@ -924,6 +967,7 @@ let cityData = [
     leisure: 5.376000000000001,
     tolerance: 6.022,
     outdoors: 4.1290000000000004,
+    cityscore: 55.44851351351353,
   },
   {
     name: "Omaha",
@@ -945,6 +989,7 @@ let cityData = [
     leisure: 4.942,
     tolerance: 5.800999999999999,
     outdoors: 4.181,
+    cityscore: 52.9468918918919,
   },
   {
     name: "Orlando",
@@ -966,6 +1011,7 @@ let cityData = [
     leisure: 5.9295,
     tolerance: 5.784000000000002,
     outdoors: 4.492999999999999,
+    cityscore: 55.471891891891914,
   },
   {
     name: "Palo Alto",
@@ -987,6 +1033,7 @@ let cityData = [
     leisure: 0.0,
     tolerance: 8.454,
     outdoors: 1.7500000000000002,
+    cityscore: 52.918378378378385,
   },
   {
     name: "Philadelphia",
@@ -1008,6 +1055,7 @@ let cityData = [
     leisure: 8.492,
     tolerance: 5.864500000000001,
     outdoors: 4.115,
+    cityscore: 56.2437837837838,
   },
   {
     name: "Phoenix",
@@ -1029,6 +1077,7 @@ let cityData = [
     leisure: 6.8100000000000005,
     tolerance: 5.5649999999999995,
     outdoors: 6.7355,
+    cityscore: 56.66256756756756,
   },
   {
     name: "Pittsburgh",
@@ -1050,6 +1099,7 @@ let cityData = [
     leisure: 6.859,
     tolerance: 7.390000000000001,
     outdoors: 4.0685,
+    cityscore: 58.85837837837838,
   },
   {
     name: "Portland, ME",
@@ -1071,6 +1121,7 @@ let cityData = [
     leisure: 3.3049999999999997,
     tolerance: 8.270999999999999,
     outdoors: 4.978,
+    cityscore: 46.60932432432432,
   },
   {
     name: "Portland, OR",
@@ -1092,6 +1143,7 @@ let cityData = [
     leisure: 6.2195,
     tolerance: 8.1595,
     outdoors: 6.303999999999999,
+    cityscore: 60.32581081081081,
   },
   {
     name: "Providence",
@@ -1113,6 +1165,7 @@ let cityData = [
     leisure: 3.9185000000000008,
     tolerance: 7.49,
     outdoors: 1.084,
+    cityscore: 50.9114864864865,
   },
   {
     name: "Raleigh",
@@ -1134,6 +1187,7 @@ let cityData = [
     leisure: 6.6129999999999995,
     tolerance: 7.562000000000001,
     outdoors: 3.3905000000000003,
+    cityscore: 62.51567567567569,
   },
   {
     name: "Richmond",
@@ -1155,6 +1209,7 @@ let cityData = [
     leisure: 6.3385,
     tolerance: 7.151,
     outdoors: 1.0350000000000001,
+    cityscore: 53.926756756756774,
   },
   {
     name: "Rochester",
@@ -1176,6 +1231,7 @@ let cityData = [
     leisure: 5.335,
     tolerance: 5.9014999999999995,
     outdoors: 4.404,
+    cityscore: 52.29013513513514,
   },
   {
     name: "Salt Lake City",
@@ -1198,6 +1254,7 @@ let cityData = [
     leisure: 5.932,
     tolerance: 8.6225,
     outdoors: 6.641000000000002,
+    cityscore: 61.79513513513514,
   },
   {
     name: "San Antonio",
@@ -1219,6 +1276,7 @@ let cityData = [
     leisure: 6.6955,
     tolerance: 6.254,
     outdoors: 3.4185000000000003,
+    cityscore: 56.70824324324324,
   },
   {
     name: "San Diego",
@@ -1240,6 +1298,7 @@ let cityData = [
     leisure: 8.21,
     tolerance: 8.5395,
     outdoors: 6.396000000000002,
+    cityscore: 64.59310810810813,
   },
   {
     name: "San Francisco Bay Area",
@@ -1262,6 +1321,7 @@ let cityData = [
     leisure: 9.407,
     tolerance: 8.012500000000001,
     outdoors: 7.014,
+    cityscore: 65.53635135135136,
   },
   {
     name: "San Luis Obispo",
@@ -1284,6 +1344,7 @@ let cityData = [
     leisure: 2.7765,
     tolerance: 9.666,
     outdoors: 1.5075000000000003,
+    cityscore: 50.006621621621626,
   },
   {
     name: "Seattle",
@@ -1305,6 +1366,7 @@ let cityData = [
     leisure: 8.1155,
     tolerance: 8.0895,
     outdoors: 7.2094999999999985,
+    cityscore: 62.74189189189191,
   },
   {
     name: "St. Louis",
@@ -1326,6 +1388,7 @@ let cityData = [
     leisure: 7.642500000000001,
     tolerance: 4.3759999999999994,
     outdoors: 4.8285,
+    cityscore: 58.587162162162166,
   },
   {
     name: "Tampa Bay Area",
@@ -1348,6 +1411,7 @@ let cityData = [
     leisure: 6.433999999999999,
     tolerance: 5.360000000000001,
     outdoors: 5.497,
+    cityscore: 54.968513513513514,
   },
   {
     name: "Washington, D.C.",
@@ -1369,6 +1433,7 @@ let cityData = [
     leisure: 10.0,
     tolerance: 6.5495,
     outdoors: 5.023499999999999,
+    cityscore: 57.50216216216215,
   },
 ];
 export default cityData;

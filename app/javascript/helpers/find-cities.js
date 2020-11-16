@@ -1,41 +1,33 @@
-const findCities = (cityData, form, searchKey, searchValue) => {
-  let topCity = "";
-  let secondCity = "";
-  let thirdCity = "";
-  let topValue = 0.0;
-  let secondValue = 0.0;
-  let thirdValue = 0.0;
-  // traversing through the cityData array of hashes
-  cityData.filter((value) => {
-    // for each hash table in the array, check all the key:value pairs
-    for (var key in value) {
-      // if the hash key matches our score category
-      if (key == searchKey) {
-        // then check the hash value vs our expected score value, if the hash value is greater, then we have a valid city, begin the sort routine of the top 3 cities
-        if (value[key] > searchValue) {
-          if (value[key] > topValue) {
-            thirdValue = secondValue;
-            secondValue = topValue;
-            topValue = value[key];
-            thirdCity = secondCity;
-            secondCity = topCity;
-            topCity = value.name;
-          } else if (value[key] > secondValue) {
-            thirdValue = secondValue;
-            secondValue = value[key];
-            thirdCity = secondCity;
-            secondCity = value.name;
-          } else if (value[key] > thirdValue) {
-            thirdValue = value[key];
-            thirdCity = value.name;
-          }
-        }
-      }
-    }
+const findCities = (cityData, form) => {
+  const chosenCities = cityData.filter(
+    (city) =>
+      city.housing >= form.housing &&
+      city.costofliving >= form.costofliving &&
+      city.startups >= form.startups &&
+      city.capital >= form.capital &&
+      city.travel >= form.travel &&
+      city.commute >= form.commute &&
+      city.business >= form.business &&
+      city.safety >= form.safety &&
+      city.healthcare >= form.healthcare &&
+      city.education >= form.education &&
+      city.environment >= form.environment &&
+      city.economy >= form.economy &&
+      city.taxation >= form.taxation &&
+      city.internetaccess >= form.internetaccess &&
+      city.leisure >= form.leisure &&
+      city.tolerance >= form.tolerance &&
+      city.outdoors >= form.outdoors
+  );
+
+  const sortedCities = chosenCities.sort((a, b) => {
+    return b.cityscore - a.cityscore;
   });
-  form["city1"] = topCity;
-  form["city2"] = secondCity;
-  form["city3"] = thirdCity;
+
+  sortedCities[0] != null ? (form["city1"] = sortedCities[0].name) : "";
+  sortedCities[1] != null ? (form["city2"] = sortedCities[1].name) : "";
+  sortedCities[2] != null ? (form["city3"] = sortedCities[2].name) : "";
+
   return form;
 };
 
