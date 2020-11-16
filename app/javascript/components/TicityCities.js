@@ -133,7 +133,7 @@ let cityData = [
   },
   {
     name: "Birmingham, AL",
-    href: "https://api.teleport.org/api/urban_areas/slug:birmingham/scores/",
+    href: "https://api.teleport.org/api/urban_areas/slug:birmingham-al/scores/",
     housing: 5.9035,
     costofliving: 5.814,
     startups: 4.3575,
