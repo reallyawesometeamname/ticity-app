@@ -151,10 +151,3 @@ it("Show page renders without crashing", () => {
   const div = document.createElement("div");
   ReactDOM.render(<CityShow search={{ id: 1 }} currentCity="San Diego" />, div);
 });
-
-// it("checks for text in a h3 tag", () => {
-//   const cityShow = shallow(
-//     <CityShow search={{ id: 1 }} currentCity="San Diego" />
-//   );
-//   expect(cityShow.find("h3").text()).toEqual("City Info");
-// });
