@@ -20,7 +20,7 @@ class SearchResults extends React.Component {
             </h3>
             <div className="container" id="search-results-page">
               <Row xs="1" sm="2" md="3">
-                <>
+                {search.city1 && (
                   <div key="city1" className="search-result-card">
                     <h3>{search.city1}</h3>
                     <br />
@@ -31,6 +31,8 @@ class SearchResults extends React.Component {
                       More Info
                     </Link>
                   </div>
+                )}
+                {search.city2 && (
                   <div key="city2" className="search-result-card">
                     <h3>{search.city2}</h3>
                     <br />
@@ -41,6 +43,8 @@ class SearchResults extends React.Component {
                       More Info
                     </Link>
                   </div>
+                )}
+                {search.city3 && (
                   <div key="city3" className="search-result-card">
                     <h3>{search.city3}</h3>
                     <br />
@@ -51,9 +55,19 @@ class SearchResults extends React.Component {
                       More Info
                     </Link>
                   </div>
-                </>
+                )}
               </Row>
             </div>
+            {!search.city1 && !search.city2 && !search.city3 && (
+              <div>
+                <h3 style={{ color: "white" }}>
+                  Hmm... Looks like there aren't any cities that meet your
+                  criteria.
+                  <br />
+                  But don't worry! You can edit your search below and try again!
+                </h3>
+              </div>
+            )}
             <div>
               {this.props.logged_in && (
                 <>

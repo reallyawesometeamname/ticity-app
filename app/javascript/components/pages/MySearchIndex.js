@@ -81,7 +81,9 @@ class MySearchIndex extends React.Component {
                             color="primary"
                             onClick={() => {
                               toggle();
-                              this.props.deleteSearch(search.id);
+                              this.props.deleteSearch(
+                                this.state.searchToDelete
+                              );
                             }}
                           >
                             Delete
