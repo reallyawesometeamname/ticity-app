@@ -23,15 +23,6 @@ class MySearchIndex extends React.Component {
     const toggle = () => {
       this.setState({ searchToDelete: undefined });
     };
-    const deleteToggle = () => {
-      {
-        toggle;
-      }
-      console.log("toggle");
-      {
-        this.props.deleteSearch(search.id);
-      }
-    };
 
     return (
       <React.Fragment>
@@ -66,11 +57,7 @@ class MySearchIndex extends React.Component {
                       >
                         Delete
                       </Button>
-                      <Modal
-                        isOpen={this.state.searchToDelete !== undefined}
-                        // toggle={toggle}
-                        // className={className}
-                      >
+                      <Modal isOpen={this.state.searchToDelete !== undefined}>
                         <ModalHeader toggle={toggle}>Delete Search</ModalHeader>
                         <ModalBody>
                           Are you sure you want to delete this search? You will
@@ -81,7 +68,9 @@ class MySearchIndex extends React.Component {
                             color="primary"
                             onClick={() => {
                               toggle();
-                              this.props.deleteSearch(search.id);
+                              this.props.deleteSearch(
+                                this.state.searchToDelete
+                              );
                             }}
                           >
                             Delete
