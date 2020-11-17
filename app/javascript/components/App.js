@@ -106,7 +106,6 @@ class App extends React.Component {
       method: "DELETE",
     })
       .then((response) => {
-        alert("Remove this search?");
         this.getSearches();
         return response;
       })
