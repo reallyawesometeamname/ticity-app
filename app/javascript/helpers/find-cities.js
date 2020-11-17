@@ -1,4 +1,8 @@
 const findCities = (cityData, form) => {
+  form.city1 = "";
+  form.city2 = "";
+  form.city3 = "";
+
   const chosenCities = cityData.filter(
     (city) =>
       city.housing >= form.housing &&
@@ -19,14 +23,15 @@ const findCities = (cityData, form) => {
       city.tolerance >= form.tolerance &&
       city.outdoors >= form.outdoors
   );
-
+  console.log("chosenCities:", chosenCities);
   const sortedCities = chosenCities.sort((a, b) => {
     return b.cityscore - a.cityscore;
   });
-
+  console.log("sortedCities", sortedCities);
   sortedCities[0] != null ? (form["city1"] = sortedCities[0].name) : "";
   sortedCities[1] != null ? (form["city2"] = sortedCities[1].name) : "";
   sortedCities[2] != null ? (form["city3"] = sortedCities[2].name) : "";
+  console.log("form:", form);
 
   return form;
 };
