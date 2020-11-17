@@ -10,8 +10,6 @@ import searchImg from "../assets/searchImg.jpg";
 class SearchEdit extends React.Component {
   constructor(props) {
     super(props);
-    searchKey: "";
-    searchValue: 0;
     this.state = {
       form: {
         ...this.props.search,
@@ -23,19 +21,12 @@ class SearchEdit extends React.Component {
 
   findCities = (cityData) => {
     let { form } = this.state;
-    const newForm = findCities(
-      cityData,
-      form,
-      this.searchKey,
-      this.searchValue
-    );
+    const newForm = findCities(cityData, form);
     this.setState({ form: newForm });
   };
 
   handleChange = (e) => {
     let { form } = this.state;
-    this.searchKey = e.target.name;
-    this.searchValue = e.target.value;
     form[e.target.name] = e.target.value;
     this.setState({ form: form });
   };
