@@ -11,8 +11,3 @@ it("Header page renders without crashing", () => {
   const div = document.createElement("div");
   ReactDOM.render(<Footer />, div);
 });
-
-// it("Header page renders content", () => {
-//   const foot = mount(<Footer />);
-//   expect(foot.find("a").text()).toEqual("Home");
-// });
