@@ -58,6 +58,16 @@ class SearchResults extends React.Component {
                 )}
               </Row>
             </div>
+            {!search.city1 && !search.city2 && !search.city3 && (
+              <div>
+                <h3 style={{ color: "white" }}>
+                  Hmm... Looks like there aren't any cities that meet your
+                  criteria.
+                  <br />
+                  But don't worry! You can edit your search below and try again!
+                </h3>
+              </div>
+            )}
             <div>
               {this.props.logged_in && (
                 <>

@@ -71,8 +71,9 @@ class SearchNew extends React.Component {
         >
           <div className="container" id="search-page-info">
             <h3 id="search-title">
-              Rank your most (only one) important category between 1 and 10.
-              One, being the lowest and ten, being the highest
+              Rank the categories from One to Ten
+              <br />
+              One being the lowest, Ten being the highest
             </h3>
             <div className="body-container" id="search-page-form">
               <div className="form">
