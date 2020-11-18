@@ -52,7 +52,7 @@ class SearchEdit extends React.Component {
         >
           <div className="container" id="editsearch-page-info">
             <h3 id="editsearch-title">
-              Edit your previous search criteria but changing the values
+              Edit your previous search criteria by changing the values
             </h3>
             <div className="body-container" id="editsearch-page-form">
               <div className="form">
