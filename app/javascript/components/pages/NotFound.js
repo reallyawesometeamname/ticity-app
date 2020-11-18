@@ -13,7 +13,7 @@ class NotFound extends React.Component {
             May we suggest you head back to our home page <br /> so we can help
             you find your TICity!
           </p>
-          <Link to={"/home"} className="button not-found-button">
+          <Link to={"/"} className="button not-found-button">
             Home
           </Link>
         </div>

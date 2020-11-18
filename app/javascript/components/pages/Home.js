@@ -6,12 +6,7 @@ import ticityBackground from "../assets/ticityBackground.jpg";
 
 class Home extends React.Component {
   render() {
-    const {
-      logged_in,
-      sign_in_route,
-      sign_up_route,
-      sign_out_route,
-    } = this.props;
+    const { logged_in } = this.props;
     return (
       <React.Fragment>
         <div
@@ -33,11 +28,13 @@ class Home extends React.Component {
               you your top 3 locations!
             </p>
           </div>
-          <div className="container button">
-            <Link to={"/searchnew"} className="button" id="home-button">
-              <Button>Find your TICity!</Button>
-            </Link>
-          </div>
+          {logged_in && (
+            <div className="container button">
+              <Link to={"/searchnew"} className="button" id="home-button">
+                <Button>Find your TICity!</Button>
+              </Link>
+            </div>
+          )}
         </div>
       </React.Fragment>
     );

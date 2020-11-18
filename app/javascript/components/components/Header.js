@@ -17,12 +17,12 @@ class Header extends React.Component {
             <NavItem>
               <a href="/">Home</a>
             </NavItem>
-            <NavItem>
-              <a href="/searchnew">New Search</a>
-            </NavItem>
-            <img src={ticityLogo} id="header-logo"></img>
             {logged_in && (
               <>
+                <NavItem>
+                  <a href="/searchnew">New Search</a>
+                </NavItem>
+                <img src={ticityLogo} id="header-logo"></img>
                 <NavItem>
                   <a href={sign_out_route}>Sign Out</a>
                 </NavItem>
@@ -33,6 +33,7 @@ class Header extends React.Component {
             )}
             {!logged_in && (
               <>
+                <img src={ticityLogo} id="header-logo"></img>
                 <NavItem>
                   <a href={sign_in_route}>Sign In</a>
                 </NavItem>
