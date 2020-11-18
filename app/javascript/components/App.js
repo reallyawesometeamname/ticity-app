@@ -132,7 +132,7 @@ class App extends React.Component {
         />
 
         <Switch>
-          <Route exact path="/" component={Home} />
+          <Route exact path="/" component={Home} logged_in={logged_in} />
           {logged_in && (
             <Route
               path="/searchedit/:id"

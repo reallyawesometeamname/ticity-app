@@ -33,7 +33,7 @@ class Home extends React.Component {
               you your top 3 locations!
             </p>
           </div>
-          {logged_in && (
+          {{ logged_in } && (
             <div className="container button">
               <Link to={"/searchnew"} className="button" id="home-button">
                 <Button>Find your TICity!</Button>
