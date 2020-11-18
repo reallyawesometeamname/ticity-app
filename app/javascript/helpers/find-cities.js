@@ -1,4 +1,8 @@
 const findCities = (cityData, form) => {
+  form.city1 = "";
+  form.city2 = "";
+  form.city3 = "";
+
   const chosenCities = cityData.filter(
     (city) =>
       city.housing >= form.housing &&
